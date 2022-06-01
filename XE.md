@@ -241,17 +241,17 @@ Expected result:
 ![Swap](https://user-images.githubusercontent.com/39699423/171399456-a1c543ef-167f-4587-9908-dde25e4b45b3.jpg)
 
 
-Test case 16. Checking the dropdown lists.
+Test case 16. Checking the dropdown list for From field.
 
 Preconditions:
-1. User is on currency converter page: https://www.xe.com/currencyconverter/
+User is on currency converter page: https://www.xe.com/currencyconverter/
 
 Steps to reproduce:
-1. Click on From dopdown.
+Click on From dopdown.
 
 Expected result: 
-1. The list of most popular currencies should be shown followed by other currencies in alphabetical order.
-***To be updated to include currency lists provided by business side.
+The list of most popular currencies should be shown followed by other currencies in alphabetical order.
+***To be updated to include currency lists provided by business side, otherwise I suggest to have USD, EUR, GBP as most popular currencies.
 
 
 Test case 17. Checking the URI after conversion.
@@ -307,19 +307,68 @@ Expected result:
 XE converter page should be shown with the info and results provided in steps (10 EUR to USD).
 
 
-Test case 20. Checking that the calculations are automatically updated after clicking Convert when changing any parameter.
+Test case 20. Checking that the calculations are automatically updated after clicking Convert when changing the value of From field.
 
 Preconditions:
 1. User is on currency converter page: https://www.xe.com/currencyconverter/
 
 Steps to reproduce:
 1. Insert 10 in Amount field.
-2. Select Eur as From currency.
+2. Select EUR as From currency.
 3. Select USD as To currency.
 4. Click Convert.
-5. Verify that tha calculations are shown.
+5. Verify that the calculations are shown.
 6. Change From to GBP.
 7. Verify the calculations.
 
 Expected result: 
 The info should be shown for 10 GBP to USD.
+
+
+Test case 21. Checking the dropdown list for To field.
+
+Preconditions:
+User is on currency converter page: https://www.xe.com/currencyconverter/
+
+Steps to reproduce:
+Click on To dopdown.
+
+Expected result: 
+The list of most popular currencies should be shown followed by other currencies in alphabetical order.
+***To be updated to include currency lists provided by business side, otherwise I suggest to have USD, EUR, GBP as most popular currencies.
+
+
+Test case 22. Checking that the calculations are automatically updated after clicking Convert when changing the value of Amount field.
+
+Preconditions:
+1. User is on currency converter page: https://www.xe.com/currencyconverter/
+
+Steps to reproduce:
+1. Insert 10 in Amount field.
+2. Select EUR as From currency.
+3. Select USD as To currency.
+4. Click Convert.
+5. Verify that the calculations are shown.
+6. Change Amount to 20.
+7. Verify the calculations.
+
+Expected result: 
+The info should be shown for 20 EUR to USD.
+
+
+Test case 23. Checking that the calculations are automatically updated after clicking Convert when changing the value of Amount field.
+
+Preconditions:
+1. User is on currency converter page: https://www.xe.com/currencyconverter/
+
+Steps to reproduce:
+1. Insert 10 in Amount field.
+2. Select EUR as From currency.
+3. Select USD as To currency.
+4. Click Convert.
+5. Verify that the calculations are shown.
+6. Change To field to GBP.
+7. Verify the calculations.
+
+Expected result: 
+The info should be shown for 10 EUR to GBP.
